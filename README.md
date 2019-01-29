@@ -1,1 +1,2 @@
-# Collins_A_Hoddinott_K_TRAA
+# Final Integrated Project for Kat Hoddinott and Amie Collins
+## Thames River Anglers' Association 
