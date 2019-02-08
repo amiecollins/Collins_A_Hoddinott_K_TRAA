@@ -102,6 +102,8 @@ b {
 	height: 120px;
 	margin-bottom: 20px;
 	padding: 15px 100px 15px 22px;
+	font-size: 30px;
+	line-height: 40px;
 }
 
 .titleStyle {
@@ -161,18 +163,19 @@ b {
 }
 
 .historyTitle {
-	background-color: #5C7031;
-	width: 900px;
-	height: 150px;
+	background-image: url(../images/history_title.jpg);
+	width: 480px;
+	height: 79px;
 	margin-top: 80px;
 	margin-bottom: 20px;
+	padding: 51px 400px 20px 20px;
 }
 
 .historyContents {
-	background-color: #9BBC49;
-	width: 900px;
-	height: 300px;
+	width: 850px;
+	height: 250px;
 	margin-bottom: 100px;
+	padding: 28px 25px 22px 25px;
 }
 
 .fundraising {
