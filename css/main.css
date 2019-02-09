@@ -15,6 +15,14 @@ b {
 	font-weight: bold;
 }
 
+a {
+	transition: 0.5s;
+}
+
+a:hover {
+	letter-spacing: 2px;
+}
+
 .theBody {
 	background-color: #5C7031;
 	color: #000;
@@ -112,6 +120,7 @@ b {
 	line-height: 75px;
 	margin-bottom: 7px;
 	color: white;
+	font-weight: bold;
 	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 
@@ -290,4 +299,96 @@ b {
 	font-size: 15px;
 	line-height: 17px;
 	padding: 15px 2px 13px 3px;
+}
+
+.chartTitle {
+	font-size: 40px;
+	line-height: 45px;
+	color: #5C7031;
+	margin-top: 51px;
+	margin-bottom: 38px;
+}
+
+.chart {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 36px;
+}
+
+.chart1 {
+	margin-right: 36px;
+}
+
+.chart2 {
+	margin-left: 36px;
+}
+
+.chart3 {
+	margin-right: 36px;
+}
+
+.chartDesc {
+	border: 1px solid #707070;
+	padding: 30px;
+	width: 317px;
+	height: 220px;
+	font-size: 24px;
+	line-height: 27px;
+}
+
+.projectsTitleBackground {
+	padding: 63px 300px 23px 28px;
+	width: 572px;
+	height: 64px;
+	background-image: url(../images/project_title_bg.jpg);
+	margin-bottom: 26px;
+}
+
+.projectsTitleBackground h3 {
+	font-size: 55px;
+	line-height: 75px;
+	color: white;
+	font-weight: bold;
+	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.projects {
+	display: flex;
+	flex-direction: row;
+}
+
+.project {
+	border: 1px solid #707070;
+	padding: 25px;
+	width: 381px;
+	height: 251px;
+}
+
+.project img {
+	margin-bottom: 4px;
+}
+
+.projectLeft {
+	margin-right: 30px;
+}
+
+.projectDesc a {
+	text-decoration: underline;
+}
+
+.projectArchives h3 {
+	font-size: 25px;
+	line-height: 30px;
+	font-weight: bold;
+	margin: 26px 0px 5px 0px;
+}
+
+.projectArchives {
+	font-size: 20px;
+	line-height: 24px;
+	margin-bottom: 123px;
+}
+
+.projectArchives a {
+	text-decoration: underline;
 }
