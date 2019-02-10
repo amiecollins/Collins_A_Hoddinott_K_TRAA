@@ -23,6 +23,7 @@ a:hover {
 	letter-spacing: 2px;
 }
 
+
 .theBody {
 	background-color: #5C7031;
 	color: #000;
@@ -391,4 +392,61 @@ a:hover {
 
 .projectArchives a {
 	text-decoration: underline;
+}
+
+.pastEventsTitle {
+    display: inline-block;
+    text-align: left;
+    vertical-align: bottom;
+    width: 900px;
+    height: 100px;
+    padding: 24px 100px 10px 10px;
+    margin-bottom: 20px;
+    background-image: url(../images/past_events_title.jpg);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: agency fb, sans-serif;
+}
+
+.articleImg {
+	width: 406px;
+	height: 62px;
+	background-image: url(../images/river.jpg);
+	margin-bottom: 47px;
+	margin-right: 31px;
+	padding: 196px 22px 22px 22px;
+}
+
+.pastEvent {
+	display: flex;
+	flex-direction: row;
+}
+
+.pastEventsContent {
+	height: 0px;
+	overflow: hidden;
+}
+
+.articleTitle {
+	width: 384px;
+	height: 42px;
+	overflow: auto;
+	background-color: #9BBC49;
+	opacity: 0.9;
+	padding: 11px 10px 11px 10px;
+	font-size: 34px;
+	line-height: 38px;
+	font-weight: bold;
+}
+
+.pastEvent article {
+	width: 419px;
+	height: 262px;
+	margin-top: 23px;
+	overflow: auto;
+	font-size: 18px;
+	line-height: 20px;
 }
