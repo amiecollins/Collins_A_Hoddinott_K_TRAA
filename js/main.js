@@ -8,13 +8,8 @@
 	function toggleContent() {
 		// Toggle Past Event Content
 		console.log(this.id);
-		var contentHeight = document.getElementById(this.id + "Content").style.height;
-		console.log(this.id+"Content");
-		if (contentHeight = "0px") {
-			document.getElementById(this.id + "Content").style.height = "auto";
-		} else {
-			document.getElementById(this.id + "Content").style.height = "0px";
-	}	}
+		document.getElementById(this.id+"Content").classList.toggle("visible");	
+	}
 
 	theButtons.forEach(currentButton => currentButton.addEventListener('click', toggleContent));
 })();

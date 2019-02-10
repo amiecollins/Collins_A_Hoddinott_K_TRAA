@@ -62,7 +62,7 @@ a:hover {
 	height: 29px;
 	position: fixed;
 	display: flex;
-	top: 0px;
+	top: 0px; 
 	padding: 8px 10px 9px 10px;
 	font-size: 29px;
 	line-height: 29px;
@@ -71,10 +71,43 @@ a:hover {
 
 .topNav ul {
 	margin-left: auto;
+	display: flex;
+	flex-direction: row;
 }
 
 .topNav ul li {
+	display: block;
+	z-index: 5;
+	position: relative;
+	/*top: -130px;*/
+}
+
+.topNav a {
+	background-color: #9BBC49;
+}
+
+.navBullet {
+	margin: 10px;
+}
+
+.fishIcon {
+	z-index: -3;
+	position: absolute;
+	top: -175px;
+	width: 50px;
+	height: 156px;
+}
+
+.topNav ul li:hover .fishIcon {
 	display: inline;
+	animation-name: peekaboo;
+	animation-duration: 1s;
+}
+
+@keyframes peekaboo {
+  0% { top: -175px; }
+  50% { top: -50px; }
+  100% { top: -175px; }
 }
 
 .logo {
@@ -426,9 +459,16 @@ a:hover {
 }
 
 .pastEventsContent {
-	height: 0px;
 	overflow: hidden;
+	display: none;
+	height: 0px;
 }
+
+.visible {
+	display: inline-block;
+	height: auto;
+}
+
 
 .articleTitle {
 	width: 384px;
