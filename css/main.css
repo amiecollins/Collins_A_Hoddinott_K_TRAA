@@ -15,12 +15,21 @@ b {
 	font-weight: bold;
 }
 
+a {
+	transition: 0.5s;
+}
+
+a:hover {
+	letter-spacing: 2px;
+}
+
 
 .shadowCurve
 {
 	border-radius: 7px;
 	box-shadow: 0px 0px 5px rgba(50,50,50,0.4);
 }
+
 
 .theBody {
 	background-color: #5C7031;
@@ -61,7 +70,7 @@ b {
 	height: 29px;
 	position: fixed;
 	display: flex;
-	top: 0px;
+	top: 0px; 
 	padding: 8px 10px 9px 10px;
 	font-size: 29px;
 	line-height: 29px;
@@ -71,10 +80,43 @@ b {
 
 .topNav ul {
 	margin-left: auto;
+	display: flex;
+	flex-direction: row;
 }
 
 .topNav ul li {
+	display: block;
+	z-index: 5;
+	position: relative;
+	/*top: -130px;*/
+}
+
+.topNav a {
+	background-color: #9BBC49;
+}
+
+.navBullet {
+	margin: 10px;
+}
+
+.fishIcon {
+	z-index: -3;
+	position: absolute;
+	top: -175px;
+	width: 50px;
+	height: 156px;
+}
+
+.topNav ul li:hover .fishIcon {
 	display: inline;
+	animation-name: peekaboo;
+	animation-duration: 1s;
+}
+
+@keyframes peekaboo {
+  0% { top: -175px; }
+  50% { top: -50px; }
+  100% { top: -175px; }
 }
 
 .logo {
@@ -127,6 +169,15 @@ b {
 	height: 130px;
 	transition: 0.5s;
 }
+
+.titleStyle {
+	display: block;
+	font-size: 70px;
+	line-height: 75px;
+	margin-bottom: 7px;
+	color: white;
+	font-weight: bold;
+	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 
 .causePicture:hover {
     box-shadow: 0px 0px 6px rgba(0,0,0,1);
@@ -466,6 +517,162 @@ b {
 	padding: 15px 2px 13px 3px;
 }
 
+.chartTitle {
+	font-size: 40px;
+	line-height: 45px;
+	color: #5C7031;
+	margin-top: 51px;
+	margin-bottom: 38px;
+}
+
+.chart {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 36px;
+}
+
+.chart1 {
+	margin-right: 36px;
+}
+
+.chart2 {
+	margin-left: 36px;
+}
+
+.chart3 {
+	margin-right: 36px;
+}
+
+.chartDesc {
+	border: 1px solid #707070;
+	padding: 30px;
+	width: 317px;
+	height: 220px;
+	font-size: 24px;
+	line-height: 27px;
+}
+
+.projectsTitleBackground {
+	padding: 63px 300px 23px 28px;
+	width: 572px;
+	height: 64px;
+	background-image: url(../images/project_title_bg.jpg);
+	margin-bottom: 26px;
+}
+
+.projectsTitleBackground h3 {
+	font-size: 55px;
+	line-height: 75px;
+	color: white;
+	font-weight: bold;
+	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.projects {
+	display: flex;
+	flex-direction: row;
+}
+
+.project {
+	border: 1px solid #707070;
+	padding: 25px;
+	width: 381px;
+	height: 251px;
+}
+
+.project img {
+	margin-bottom: 4px;
+}
+
+.projectLeft {
+	margin-right: 30px;
+}
+
+.projectDesc a {
+	text-decoration: underline;
+}
+
+.projectArchives h3 {
+	font-size: 25px;
+	line-height: 30px;
+	font-weight: bold;
+	margin: 26px 0px 5px 0px;
+}
+
+.projectArchives {
+	font-size: 20px;
+	line-height: 24px;
+	margin-bottom: 123px;
+}
+
+.projectArchives a {
+	text-decoration: underline;
+}
+
+.pastEventsTitle {
+    display: inline-block;
+    text-align: left;
+    vertical-align: bottom;
+    width: 900px;
+    height: 100px;
+    padding: 24px 100px 10px 10px;
+    margin-bottom: 20px;
+    background-image: url(../images/past_events_title.jpg);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: agency fb, sans-serif;
+}
+
+.articleImg {
+	width: 406px;
+	height: 62px;
+	background-image: url(../images/river.jpg);
+	margin-bottom: 47px;
+	margin-right: 31px;
+	padding: 196px 22px 22px 22px;
+}
+
+.pastEvent {
+	display: flex;
+	flex-direction: row;
+}
+
+.pastEventsContent {
+	overflow: hidden;
+	display: none;
+	height: 0px;
+}
+
+.visible {
+	display: inline-block;
+	height: auto;
+}
+
+
+.articleTitle {
+	width: 384px;
+	height: 42px;
+	overflow: auto;
+	background-color: #9BBC49;
+	opacity: 0.9;
+	padding: 11px 10px 11px 10px;
+	font-size: 34px;
+	line-height: 38px;
+	font-weight: bold;
+}
+
+.pastEvent article {
+	width: 419px;
+	height: 262px;
+	margin-top: 23px;
+	overflow: auto;
+	font-size: 18px;
+	line-height: 20px;
+}
+  
 #welcome
 {
 	display: flex;
@@ -964,9 +1171,4 @@ b {
 	margin-left: 80px;
 	margin-top: 100px;
 }
-
-
-
-
-
 
