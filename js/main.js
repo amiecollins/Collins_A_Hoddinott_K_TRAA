@@ -1,15 +1,16 @@
-// Javascript Doc
-(() => {
+(function(){
+	"use strict";
+	
+	console.log("fired");
 
-	console.log("Javascript is linked up");
+	var button = document.querySelector("#button");
+	var burgerCon = document.querySelector("#burgerCon");
 
-	var theButtons = document.querySelectorAll('.pastEventsTitle');
-
-	function toggleContent() {
-		// Toggle Past Event Content
-		console.log(this.id);
-		document.getElementById(this.id+"Content").classList.toggle("visible");	
+	function hamburgerMenu() {
+		burgerCon.classList.toggle("slideToggle");
+		button.classList.toggle("expanded");
 	}
 
-	theButtons.forEach(currentButton => currentButton.addEventListener('click', toggleContent));
+	button.addEventListener("click", hamburgerMenu, false);
+		
 })();
