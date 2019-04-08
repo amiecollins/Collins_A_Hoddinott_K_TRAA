@@ -1,1270 +1,1197 @@
-@charset "UTF-8";
-/*CSS Doc*/
+  /*Utility Class*/
+.hide
+{
+  display: none;
+}
 
+/* General rules - scales images, videos to size of container */
+img, embed, object, video {
+  max-width: 100%; 
+}
+
+
+/*switch box model*/
+html {
+  box-sizing: border-box; 
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+/*Fix for scaling of images IE*/
+img {
+  -ms-interpolation-mode: bicubic; 
+}
+
+/*Fonts*/
 @font-face {
+font-family: tenso, sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+/*General Rules for Elements*/
+
+body
+{
+  font-family: 'tenso', Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+a 
+{ 
+  color:#000; 
+  text-decoration: none;  
+  transition:all .1s linear 0s;
+}
+
+p
+{
+  font-family: 'tenso', Helvetica, Arial, sans-serif;
+  color: black;
+  font-size: 15px;
+}
+
+.container {
+  margin: 0px auto;
+  padding: 0px 0px 0px 0px;
+  max-width: 1200px; 
+}
+
+/*Header and Nav*/
+
+#mainHeader
+{
+  margin-bottom: 20px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#traaLogo
+{
+  display: block;
+  max-height: 60px;
+  margin-top: 0;
+}
+
+#title
+{
+  font-size: 28px;
   font-family: Boogaloo;
-  src: url(../includes/fonts/boogaloo/Boogaloo-Regular.otf);
+  src: url(../assets/fonts/boogaloo/Boogaloo-Regular.otf);
   font-weight: bold;
-}
-
-.hidden {
-	display: none;
-}
-
-b {
-	font-weight: bold;
-}
-
-a {
-	color: #5d7031;
-	transition: 0.5s;
-}
-
-a:hover {
-	letter-spacing: 2px;
+  color: #9BBC49;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
 }
 
 
-.shadowCurve
+/*want to push burger menu to right, set to flex*/
+#mainNav
 {
-	border-radius: 7px;
-	box-shadow: 0px 0px 5px rgba(50,50,50,0.4);
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
 }
 
-
-.theBody {
-	background-color: #5C7031;
-	color: #000;
-    font-size: 15px;
-    line-height: 15px;
-    font-family: agency-fb, sans-serif;
-}
-
-.theHeader {
-	margin: 34px 80px 33px 50px;
-	flex-direction: row;
-	display: flex;
-}
-
-.theFooter {
-	background-color: #9BBC49;
-	width: 940px;
-	height: 190px;
-	padding: 30px;
-	justify-content: space-between;
-	flex-direction: row;
-	display: flex;
-}
-
-.katFooter {
-	margin-top: 1200px;
-}
-
-.theContainer {
-	background-color: white;
-	width: 1000px;
-	height: 100%;
-	margin: 0 auto;
-	padding-top: 50px;
-}
-
-.topNav {
-	background-color: #9BBC49;
-	width: 980px;
-	height: 29px;
-	position: fixed;
-	display: flex;
-	top: 0px; 
-	padding: 8px 10px 9px 10px;
-	font-size: 29px;
-	line-height: 29px;
-	text-align: right;
-	z-index: 3;
-}
-
-.topNav ul {
-	margin-left: auto;
-	display: flex;
-	flex-direction: row;
-}
-
-.topNav ul li {
-	display: block;
-	z-index: 5;
-	position: relative;
-	/*top: -130px;*/
-}
-
-.topNav a {
-	background-color: #9BBC49;
-}
-
-.navBullet {
-	margin: 10px;
-}
-
-.fishIcon {
-	z-index: -3;
-	position: absolute;
-	top: -175px;
-	width: 50px;
-	height: 156px;
-}
-
-.topNav ul li:hover .fishIcon {
-	display: inline;
-	animation-name: peekaboo;
-	animation-duration: 1s;
-}
-
-@keyframes peekaboo {
-  0% { top: -175px; }
-  50% { top: -50px; }
-  100% { top: -175px; }
-}
-
-.logo {
-	width: 200px;
-	height: 200px;
-	margin-right: 50px;
-	margin-bottom: 12px;
-}
-
-.logoSvg {
-	width: 200px;
-	height: 200px;
-}
-
-.siteTitle {
-	color: #9BBC49;
-	width: 620px;
-	height: 212px;
-	font-size: 95px;
-	line-height: 95px;
-	text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-}
-
-.fundraising {
-	background-color: #9BBC49;
-	width: 195px;
-	height: 170px;
-	font-size: 12px;
-	line-height: 12px;
-	padding: 10px;
-}
-
-.fundraising span {
-	font-family: Boogaloo;
-	margin-bottom: 7px;
-	font-size: 16px;
-	line-height: 20px;
-	display: block;
-}
-
-.cause {
-	justify-content: space-between;
-	flex-direction: column;
-	display: flex;
-}
-
-.causePicture {
-	background-color: #5C7031;
-	width: 130px;
-	height: 130px;
-	transition: 0.5s;
-}
-
-.titleStyle {
-	display: block;
-	font-size: 70px;
-	line-height: 75px;
-	margin-bottom: 7px;
-	color: white;
-	font-weight: bold;
-	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-}
-
-.causePicture:hover {
-    box-shadow: 0px 0px 10px rgba(0,0,0,1);
-}
-
-.causeTitle {
-	background-color: #9BBC49;
-	width: 130px;
-	height: 45px;
-	font-size: 15px;
-	line-height: 20px;
-	text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-	text-align: center;
-}
-
-.cause1 {
-	background-image: url(../images/hatchery_footer.jpg)
-}
-
-.cause2 {
-	background-image: url(../images/salmonids_footer.jpg)
-}
-
-.cause3 {
-	background-image: url(../images/komoka_footer.jpg)
-}
-
-.footerLinks {
-	flex-direction: column;
-	display: flex;
-}
-
-.footerNavigation {
-	flex-direction: row;
-	display: flex;
-}
-
-.socialMedia {
-	width: 91px;
-	height: 128px;
-	flex-direction: row;
-	display: flex;
-}
-
-.socialMediaPrompt {
-	writing-mode: vertical-lr;
-	font-size: 18px;
-	line-height: 24px;
-	margin-left: 10px;
-	margin-top: 11px;
-}
-
-.socialMediaLinks {
-	margin-left: auto;
-	flex-direction: column;
-	justify-content: space-between;
-	display: flex;
-}
-
-.socialMediaLink {
-	background-color: #5C7031;
-	width: 35px;
-	height: 35px;
-}
-
-.footerNavigationPiece {
-	background-color: #9BBC49;
-	width: 104px;
-	height: 108px;
-	margin-left: 10px;
-	font-size: 12px;
-	line-height: 15px;
-	padding: 11px 10px 9px 0px;
-	text-align: right;
-}
-
-.copyright {
-	width: 209px;
-	height: 20px;
-	margin-top: 15px;
-	font-size: 15px;
-	line-height: 17px;
-	padding: 15px 2px 13px 3px;
-}
-
-
-#mainMemberCon
+#mainNav button
 {
-	display: flex;
-	flex-direction: row;
-	z-index: 2;
-	justify-content: center;
+  background: url(../img/burger.svg) center no-repeat;
+  width: 36px;
+  height: 52px;
+  border: 0;
+  transition: all 400ms ease;
 }
 
-#memberBanner, #mainMemberCon
+#burgerMenu
 {
-	position: absolute;
+  list-style: none;
 }
 
-#memberBanner
+#mainNav button.expanded
 {
-	background-color: #9bbc49;
-	height: 55px;
-	width: 1000px;
-	z-index: 1;
-	margin-top: 130px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  margin-left: auto;
 }
 
-#featuredImage img
+#mainNav li a
 {
-	width: 433px;
-	height: 286px;
-	margin-left: 40px;
-	margin-right: 6px;
-	margin-top: 123px;
+  display: block;
+  padding: 10px 0 10px 0; /*trbl*/
+  color: #8ea76d;
+  text-align: center;
 }
 
-#memberTextSection
+#mainNav li
 {
-	margin-top: 5px;
-	height: 286px;
-	width: 435px;
-	margin-left: 21px;
-	margin-right: 40px;
-	margin-top: 123px;
-
+  border-bottom: 1px solid #efefef;
 }
 
-#memberText
+#mainNav li:first-child
 {
-	font-size: 40px;
-	color: black;
-	line-height: 55pt;
+  border-top: 1px solid #efefef;
 }
 
-#becomeMember
+#mainNav li:last-child
 {
-	font-size: 20px;
-	color: #333;
-	line-height: 25px;
-	letter-spacing: 1px;
-
+  margin-bottom: 10px;
 }
 
 
-#memberText2Section
+#mainNav input[type=text]
 {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-top: 420px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #cacaca;
+  border-radius: 3px 0px 3px 0px;
+  background-color: #fefefe;
+  box-shadow: inset 0 1px 2px rgba(10,10,10, 0.1);
+  color: #0a0a0a;
 }
 
-#memberText2
+#mainNav input[type=submit]
 {
-	height: 85px;
-	width: 545px;
-	margin-top: 35px;
-	margin-bottom: 68px;
-	font-size: 25px;
-	text-align: center;
-	line-height: 40px;
+  height: 40px;
+  width: 100px;
+  border-radius: 0 3px 3px 0;
+  text-align: center;
+  font-size: 14px;
+  background-color: #8fa771;
+  color: #fefefe;
+  border: 0;
 }
 
-#becomeMemberBanner, #lowerBodyCon
+#burgerCon
 {
-	position: absolute;
+  margin-top: 20px;
+  display: none;
 }
 
-#becomeMemberBanner
+#burgerCon.slideToggle
 {
-	background-color: #5d7031;
-	height: 145px;
-	width: 1000px;
-	justify-content: center;
-	margin-top: -20px;
-	z-index: 1;
-	margin-bottom: 400px;
+  display: block;
 }
-#lowerBodyCon
+
+.home
 {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding-right: 40px;
-	padding-left: 40px;
-	z-index: 2;
-}
+  display: flex;
+  flex-wrap: wrap;
 
-.sections
-{
-	display: flex;
-	flex-direction: column;
-	margin-left: 30px;
-	margin-right: 30px;
-	margin-bottom: 400px;
-
-}
-
-#sectionsPhotos1, #sectionsPhotos2, #sectionsPhotos3
-{
-	width: 252px;
-	height: 169px;
-	margin-bottom: 0px;
-}
-
-.sectionsTextHeaders
-{
-	width: 252px;
-	text-align: center;
-	font-size: 30px;
-	height: 100px;
-	line-height: 40px;
-}
-
-.sectionsText
-{
-	width: 252px;
-	height: 536px;
-	margin-bottom: 185px;
-	text-align: justify;
-	font-size: 22px;
-	line-height: 30px;
-}
-
-
-.contents {
-	margin-left: 50px;
-	margin-right: 50px;
-	flex-direction: column;
-	display: flex;
-}
-
-.aboutTitle {
-	background-image: url(../images/about_title.jpg);
-	width: 778px;
-	height: 120px;
-	margin-bottom: 20px;
-	padding: 15px 100px 15px 22px;
-	font-size: 30px;
-	line-height: 40px;
-}
-
-.titleStyle {
-	display: block;
-	font-size: 70px;
-	line-height: 75px;
-	margin-bottom: 7px;
-	color: white;
-	font-weight: bold;
-	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-}
-
-.valueRow {
-	justify-content: space-between;
-	flex-direction: row;
-	display: flex;
-	margin-bottom: 20px;
-}
-
-.valuePicture {
-	background-color: #5C7031;
-	width: 280px;
-	height: 280px;
-}
-
-.value1 {
-	background-image: url(../images/value1.jpg);
-}
-
-.value2 {
-	background-image: url(../images/value2.jpg);
-}
-
-.value3 {
-	background-image: url(../images/value3.jpg);
-}
-
-.value4 {
-	background-image: url(../images/value4.jpg);
-}
-
-.value5 {
-	background-image: url(../images/value5.jpg);
-}
-
-.value6 {
-	background-image: url(../images/value6.jpg);
-}
-.valueContents {
-	background-color: #9BBC49;
-	width: 212px;
-	height: 97px;
-	margin: 140px 20px 20px 20px;
-	padding: 14px 14px 7px 14px;
-	opacity: 0.9;
-	font-size: 15px;
-	line-height: 19px;
-}
-
-.historyTitle {
-	background-image: url(../images/history_title.jpg);
-	width: 480px;
-	height: 79px;
-	margin-top: 80px;
-	margin-bottom: 20px;
-	padding: 51px 400px 20px 20px;
-}
-
-.historyContents {
-	width: 850px;
-	height: 250px;
-	padding: 28px 25px 22px 25px;
-}
-
-
-.fundraising {
-	background-color: #9BBC49;
-	width: 195px;
-	height: 170px;
-	font-size: 12px;
-	line-height: 12px;
-	padding: 10px;
-}
-
-.fundraising span {
-	font-family: Boogaloo;
-	margin-bottom: 7px;
-	font-size: 16px;
-	line-height: 20px;
-	display: block;
-}
-
-.cause {
-	justify-content: space-between;
-	flex-direction: column;
-	display: flex;
-}
-
-.causePicture {
-	background-color: #5C7031;
-	width: 130px;
-	height: 130px;
-	transition: 0.5s;
-}
-
-.causePicture:hover {
-    box-shadow: 0px 0px 6px rgba(0,0,0,1);
-}
-
-.causeTitle {
-	background-color: #9BBC49;
-	width: 130px;
-	height: 45px;
-	font-size: 15px;
-	line-height: 20px;
-	text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-	text-align: center;
-}
-
-.cause1 {
-	background-image: url(../images/hatchery_footer.jpg)
-}
-
-.cause2 {
-	background-image: url(../images/salmonids_footer.jpg)
-}
-
-.cause3 {
-	background-image: url(../images/komoka_footer.jpg)
-}
-
-.footerLinks {
-	flex-direction: column;
-	display: flex;
-}
-
-.footerNavigation {
-	flex-direction: row;
-	display: flex;
-}
-
-.socialMedia {
-	width: 91px;
-	height: 128px;
-	flex-direction: row;
-	display: flex;
-}
-
-.socialMediaPrompt {
-	writing-mode: vertical-lr;
-	font-size: 18px;
-	line-height: 24px;
-	margin-left: 10px;
-	margin-top: 11px;
-}
-
-.socialMediaLinks {
-	margin-left: auto;
-	flex-direction: column;
-	justify-content: space-between;
-	display: flex;
-}
-
-.socialMediaLink {
-	background-color: #5C7031;
-	width: 35px;
-	height: 35px;
-}
-
-.footerNavigationPiece {
-	background-color: #9BBC49;
-	width: 104px;
-	height: 108px;
-	margin-left: 10px;
-	font-size: 12px;
-	line-height: 15px;
-	padding: 11px 10px 9px 0px;
-	text-align: right;
-}
-
-.copyright {
-	width: 209px;
-	height: 20px;
-	margin-top: 15px;
-	font-size: 15px;
-	line-height: 17px;
-	padding: 15px 2px 13px 3px;
-}
-
-.chartTitle {
-	font-size: 40px;
-	line-height: 45px;
-	color: #5C7031;
-	margin-top: 51px;
-	margin-bottom: 38px;
-}
-
-.chart {
-	display: flex;
-	flex-direction: row;
-	margin-bottom: 36px;
-}
-
-.chart1 {
-	margin-right: 36px;
-}
-
-.chart2 {
-	margin-left: 36px;
-}
-
-.chart3 {
-	margin-right: 36px;
-}
-
-.chartDesc {
-	border: 1px solid #707070;
-	padding: 30px;
-	width: 317px;
-	height: 220px;
-	font-size: 24px;
-	line-height: 27px;
-}
-
-.projectsTitleBackground {
-	padding: 63px 300px 23px 28px;
-	width: 572px;
-	height: 64px;
-	background-image: url(../images/project_title_bg.jpg);
-	margin-bottom: 26px;
-}
-
-.projectsTitleBackground h3 {
-	font-size: 55px;
-	line-height: 75px;
-	color: white;
-	font-weight: bold;
-	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-}
-
-.projects {
-	display: flex;
-	flex-direction: row;
-}
-
-.project {
-	border: 1px solid #707070;
-	padding: 25px;
-	width: 381px;
-	height: 251px;
-}
-
-.project img {
-	margin-bottom: 4px;
-}
-
-.projectLeft {
-	margin-right: 30px;
-}
-
-.projectDesc a {
-	text-decoration: underline;
-}
-
-.projectArchives h3 {
-	font-size: 25px;
-	line-height: 30px;
-	font-weight: bold;
-	margin: 26px 0px 5px 0px;
-}
-
-.projectArchives {
-	font-size: 20px;
-	line-height: 24px;
-	margin-bottom: 123px;
-}
-
-.projectArchives a {
-	text-decoration: underline;
-}
-
-.pastEventsTitle {
-    display: inline-block;
-    text-align: left;
-    vertical-align: bottom;
-    width: 900px;
-    height: 100px;
-    padding: 24px 100px 10px 10px;
-    margin-bottom: 20px;
-    background-image: url(../images/past_events_title.jpg);
-    cursor: pointer;
-    border: none;
-    text-decoration: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    font-family: agency fb, sans-serif;
-}
-
-.articleImg {
-	width: 406px;
-	height: 62px;
-	background-image: url(../images/river.jpg);
-	margin-bottom: 47px;
-	margin-right: 31px;
-	padding: 196px 22px 22px 22px;
-}
-
-.pastEvent {
-	display: flex;
-	flex-direction: row;
-}
-
-.pastEventsContent {
-	overflow: hidden;
-	display: none;
-	height: 0px;
-}
-
-.visible {
-	display: inline-block;
-	height: auto;
-}
-
-
-.articleTitle {
-	width: 384px;
-	height: 42px;
-	overflow: auto;
-	background-color: #9BBC49;
-	opacity: 0.9;
-	padding: 11px 10px 11px 10px;
-	font-size: 34px;
-	line-height: 38px;
-	font-weight: bold;
-}
-
-.pastEvent article {
-	width: 419px;
-	height: 262px;
-	margin-top: 23px;
-	overflow: auto;
-	font-size: 18px;
-	line-height: 20px;
-}
-  
-#welcome
-{
-	display: flex;
-	margin-top: 120px;
-	justify-content: space-between;
-}
-
-#welcomeText
-{
-	display: flex;
-	flex-direction: column;
-	margin-left: 40px;
-	width: 375px;
-}
-
-#welcomeTitleText
-{
-	font-size: 45px;
-	margin-top: 40px;
-	margin-bottom: 40px;
-
+  justify-content: center;
 }
 
 #welcomePhoto
 {
-	margin-right: 40px;
+  min-width: 300px;
+}
+
+#welcomeText
+{
+  text-align: center;
+  min-width: 70%;
+}
+
+
+#welcome
+{
+  font-size: 28px;
+  width: 100%;
 }
 
 #dedication
 {
-	font-size: 20pt;
-	margin-bottom: 35px;
+  font-size: 18px;
+  margin-top: -5px;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 #quote
 {
-	font-size: 20px;
-	line-height: 25px;
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-#gear, #gaerBanner
+#gearImg
 {
-	position: absolute;
+  display: flex;
+  flex-direction: row;
 }
 
-#gearBanner
+#gear1
 {
-	background-color: #9bbc49;
-	height: 350px;
-	z-index: 1;
-	width: 100%;
-	margin-top: 150px;
-}
-#gear
-{
-	height: 390px;
-	display: flex;
-	flex-direction: row;
-	margin-top: -370px;
-	z-index: 2;
-	margin-left: auto;
+  margin-right: 5px;
+  min-width: 140px;
+  margin-left: 15px;
 }
 
-#traaGear
+#gear2
 {
-	font-size: 40px;
-	margin-bottom: 25px;
+  margin-left: 5px;
+  min-width: 140px;
+  margin-right: 15px;
 }
 
-#teesHatsStickers
+#gearHeading
 {
-	font-size: 30px;
-	width: 465px;
-	margin-bottom: 15px;
+  background-color: #9abb48;
+  width: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: normal;
 }
 
-#itsASteal
+#homeCon h2
 {
-	font-size: 25px;
-	width: 465px;
-	line-height: 40px;
+  width: 100%;
+  text-align: center;
 }
 
-#gearText
+#rodHeading
 {
-	display: flex;
-	flex-direction: column;
-	margin-top: 80px;
-	margin-left: 40px;
+  background-color: #5d7030;
+  width: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  font-weight: normal;
 }
 
-#gearPhotos
+.rodBuildingInfo
 {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	margin-left: 191.5px;
-	
+  text-align: center;
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 25px;
 }
 
-#rodBuilding
+.rodsImg
 {
-	justify-content: center;
-	margin-top: 160px;
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	margin-top: 400px;
-	margin-bottom: 600px;
-	width: 1000px;
+  display: flex;
+  flex-direction: row;
 }
 
-#rodBuilding h2
+#fundraisingHeading
 {
-	font-size: 35px;
-	margin-bottom: 30px;
-	color: white;
+  background-color: #5d7030;
+  width: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  font-weight: normal;
 }
 
-#rodBanner, #forRodBanner
+.fundraising p
 {
-	position: absolute;
+  text-align: center;
+  width: 100%;
+  background-color: #9abb48;
+  width: 270px;
+  height: 70px;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 16px;
 }
 
-#forRodBanner
+#businessesHeading
 {
-	z-index: 2;
-	width: 1000px;
-	justify-content: center;
+  background-color: #5d7030;
+  width: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  font-weight: normal;
 }
 
-#rodBanner
+#logos1
 {
-	z-index: 1;
-	background-color: #5d7031;
-	height: 100px;
-	width: 1000px;
-	margin-top: -217px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  margin-top: 25px;
 }
 
-#rodBuildingInfo
+#logos2
 {
-	font-size: 25px;
-	margin-bottom: 45px;
-	color: white;
-
+  display: flex;
+  flex-direction: row;
+  max-width: 60%;
+  justify-content: center;
+  margin-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
-#rodBuildingDesc
+.tryRecycling
 {
-	font-size: 30px;
-	line-height: 40px;
-	margin-right: 40px;
-	margin-left: 40px;
-	letter-spacing: 2px;
+  margin-top: 25px;
 }
 
-#rodBuildingPhotos img
+#logos1 p, #logos2 p
 {
-	height: 140px;
-	width: 140px;
+  text-align: center;
+  font-size: 12px;
 }
 
-#rodBuildingPhotos
+.logoCon
 {
-	justify-content: center;
-	margin-right: 40px;
-	margin-left: 40px;
-	margin-top: 40px;
+  margin: 10px;
 }
 
-#hatcheryBanner, #forHatcheryBanner
+.member
 {
-	position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: center;
 }
 
-#hatcheryBanner
+.memberPhotoLeft, .memberPhotoRight
 {
-	z-index: 1;
-	background-color: #5d7031;
-	height: 100px;
-	width: 1000px;
-	margin-top: 135px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 334px;
 }
 
-#forHatcheryBanner
+#becomeMember
 {
-	width: 1000px;
-	z-index: 2;
-	justify-content: center;
-	text-align: center;
+  width: 95%;
+  background-color: #9abb48;
+  padding: 3px 0;
+  color: black;
+  text-align: center;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  font-size: 30px
 }
 
-#hatcheryHome h2
+#narrowerText
 {
-	text-align: center;
-	font-size: 35px;
-	margin-top: 175px;
-	margin-bottom: 30px;
-	color: white;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-#hatcheryHome p
+.memberHeading
 {
-	text-align: left;
-	margin-left: 40px;
-	width: 495px;
-	font-size: 30px;
-	line-height: 40px;
-	letter-spacing: 2px;
-	margin-top: 340px;
+  width: 100%;
+  background-color: #5d7031;
+  text-align: center;
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
 }
 
-#hatcheryHome img
+.member p
 {
-	width: 390px;
-	height: 260px;
-	margin-right: 40px;
-	margin-top: 310px;
+  text-align: justify;
 }
 
-#hatcheryInfo
+
+
+
+#contactCon
 {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-bottom: 160px;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
 }
 
-#fundraisingBanner, #forFundraisingBanner
+#contactCon h2
 {
-	position: absolute;
+  font-size: 25px;
+  font-weight: normal;
+  text-align: center;
 }
 
-#homepageFundraising
-{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding-right: 40px;
-	padding-left: 40px;
-	margin-top: -50px;
-}
-
-#forFundraisingBanner
-{
-	z-index: 2;
-}
-#fundraisingBanner
-{
-	height: 100px;
-	justify-content: center;
-	width: 1000px;
-	z-index: 1;
-	background-color: #5d7031;
-	margin-top: 40px;
-}
-#homepageFundraising h2
-{
-	text-align: center;
-	font-size: 35px;
-	margin-top: 85px;
-	margin-bottom: 40px;
-	color: white;
-}
-
-.fundraisingSections
-{
-	display: flex;
-	flex-direction: column;
-	margin-top: 10px;
-	margin-right: 40px;
-	margin-left: 40px;
-}
-
-#fundraisingSectionsFlex
-{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-left: 40px;
-	margin-right: 40px;
-	margin-top: 240px;
-}
-
-.fundraisingSections p
-{
-	text-align: center;
-	margin-top: 20px;
-	font-size: 25px;
-	line-height: 40px;
-}
-
-#localBusinesses h2
-{
-	text-align: center;
-	font-size: 35px;
-	margin-top: 160px;
-	margin-bottom: 30px;
-}
-
-#firstRowLogos
-{
-	display: flex;
-	flex-direction: row;
-	margin-right: 40px;
-	margin-left: 40px;
-	justify-content: space-between;
-	margin-top: 200px;
-}
-
-.logoBox
-{
-	display: flex;
-	flex-direction: column;
-}
-
-.logoBox p
-{
-	font-size: 25px;
-	text-align: center;
-	line-height: 35px;
-	margin-top: 30px;
-}
-
-#localBusinessesBanner, #localBusinesses
-{
-	position: absolute;
-}
-
-#localBusinesses
-{
-	z-index: 2;
-	width: 1000px;
-}
-
-#localBusinessesBanner
-{
-	height: 100px;
-	width: 1000px;
-	z-index: 1;
-	background-color: #5d7031;
-	margin-top: 115px;
-}
-
-#localBusinesses h2
-{
-	text-align: center;
-	font-size: 35px;
-	color: white;
-}
-
-#firstRowLogos
-{
-	margin-top: 200px;
-}
-#secondRowLogos
-{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	margin-top: 200px;
-}
-
-.logoBox2
-{
-	margin-left: 60px;
-	margin-right: 60px;
-}
-
-#contactArea
-{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-right: 80px;
-	margin-left: 80px;
-}
-
-#contactArea img
-{
-	height: 574px;
-	width: 382px;
-	margin-right: 25px;
-}
 
 #formContainer
 {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	margin-left: 25px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 90px;
 }
 
 #formContainer label
 {
-	font-size: 26px;
-	margin-bottom: 5px;
+  font-size: 26px;
+  margin-bottom: 5px;
 }
 
-#contactCon p
+#phone, #email, #name, #message
 {
-	text-align: center;
-	margin-bottom: 80px;
-	font-size: 40px;
-	margin-top: 150px;
+  padding: 6px 15px 6px 15px; /*trbl*/
+  border: 2px solid #9bbc49;
+  border-radius: 10px;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  margin-bottom: 35px;
+  height: 40px;
 }
 
-#phone, #email, #name, #comments
+#message
 {
-	width: 380px;
-	padding: 6px 15px 6px 15px; /*trbl*/
-	border: 2px solid #9bbc49;
-	border-radius: 10px;
-	text-shadow: 0 2px 3px rgba(0,0,0,0.1);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
-	margin-bottom: 35px;
+  height: 100px;
 }
 
 #submit
 {
-	background-color: #9bbc49;
-	width: 140px;
-	padding: 6px 15px 6px 15px; /*trbl*/
-	border: 2px solid #9bbc49;
-	border-radius: 10px;
-	text-shadow: 0 2px 3px rgba(0,0,0,0.1);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
-	font-size: 20px;
-}
-
-#lowerContactCon
-{
-	display: flex;
-	flex-direction: row;
-	z-index: 2;
-	margin-top: 150px;
+  background-color: #9bbc49;
+  width: 140px;
+  padding: 6px 15px 6px 15px; /*trbl*/
+  border: 2px solid #9bbc49;
+  border-radius: 10px;
+  text-shadow: 0 2px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15) inset;
+  font-size: 20px;
 }
 
 #mapCon
 {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	margin-right: 80px;
-	margin-left: 244px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-#mapBanner, #lowerContactCon
+#address
 {
-	position: absolute;
-}
-
-#mapBanner
-{
-	z-index: 1;
-	background-color: #5d7031;
-	height: 475px;
-	width: 1000px;
-	margin-top: 200px;
-}
-
-#mapCon p
-{
-	font-size: 27px;
-	margin-top: 17px;
-}
-
-#shippingAddressTitle
-{
-	font-size: 40px;
-	margin-bottom: 20px;
-	color: white;
-}
-
-#shippingAddress
-{
-	font-size: 25px;
-	margin-bottom: 60px;
-	color: white;
-	line-height: 35px;
-}
-
-#facebookContact
-{
-	font-size: 35px;
-	color: white;
-	text-decoration: underline;
+  text-align: center;
+  font-size: 18px;
 }
 
 #moreContactInfo
 {
-	margin-left: 80px;
-	margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, max-content(0,1fr));
+  grid-gap: 10px;
+  margin: 0px auto;
+  padding: 0px 40px 0px 40px;
+  max-width: 320px; 
 }
+
+.shipping
+{
+  font-size: 25px;
+  font-weight: normal;
+  text-align: center;
+  width: 100%;
+  background-color: #5d7031;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 50px;
+}
+
+#moreContactInfo p
+{
+  grid-column: 2/3;
+  margin-left: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#moreContactInfo a
+{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-align: center;
+  margin-right: 10px;
+  font-size: 25px;
+  background-color: #9bbc49;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 15px;
+}
+
+
+#footerCon
+{
+  background-color: #9bbc49;
+  height: 42px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+#footerNav
+{
+  display: none;
+}
+
+footer
+{
+  font-size: 20px;
+}
+
+@media screen and (min-width: 500px) {
+
+  #rodImgCon
+  {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  grid-gap: 20px;
+  }
+
+  .rodsImg
+  {
+    display: contents;
+  }
+
+  .rod
+  {
+    min-width: 150px;
+    width: 100%;
+    flex-flow: 3;
+  }
+
+  #quote
+  {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+.fundraising
+{
+  display: flex;
+  flex-direction: column;
+}
+
+  .fundraising p
+{
+  text-align: center;
+  width: 100%;
+  background-color: #9abb48;
+  height: 70px;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+
+
+
+}
+
+@media screen and (min-width: 650px) {
+.home
+{
+  
+}
+
+.welcomeCon
+
+#welcomePhoto
+{
+  min-width: auto;
+  margin: 0;
+  min-width: auto;
+}
+
+#welcomeText
+{
+  text-align: left;
+  min-width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#welcome
+{
+  font-size: 28px;
+  width: auto;
+}
+#quote
+{
+  display: flex;
+  margin: 0;
+  min-width: auto;
+  word-wrap: wrap;
+}
+
+}
+
+
+@media screen and (min-width: 750px) {
+
+  #gearBanner
+{
+  display: block;
+  background-color: #9abb48;
+  height: 220px;
+  width: 100%;
+  margin-top: 90px;
+  margin-bottom: -200px;
+  z-index: 1;
+}
+
+  #gearCon
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 2;
+    margin-top: -100px;
+  }
+
+  .gearText
+  {
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+  }
+
+  .gearText p
+  {
+    font-size: 20px;
+    max-width: 80%;
+    margin-left: 8%;
+  }
+
+  .gearText h2
+  {
+    display: block;
+    font-size: 20px;
+    max-width: 80%;
+    margin-left: 8%;
+  }
+
+  #gearImg
+  {
+    display: flex;
+    flex-direction: column;
+    margin-right: 8%;
+    margin-top: 20px;
+  }
+
+  #gearImg img
+  {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 200px;
+  }
+
+  #gearHeading
+  {
+    display: none;
+  }
+
+  #gearAvailable
+  {
+    font-size: 26px;
+    margin-top: 5px;
+
+  }
+
+  #gearTees
+  {
+    font-size: 22px;
+    margin-top: -15px;
+    margin-bottom: 0;
+  }
+  
+
+   .fundraising p
+  {
+    width: 300px;
+    height: 130px;
+    margin-top: 40px;
+    font-size: 40px;
+  }
+
+   .rod
+  {
+    min-width: 200px;
+  }
+
+  .fundraising img
+  {
+    display: block
+  }
+
+  .member
+  {
+    display: grid;
+    grid-template-columns: repeat(6, max-content(0,1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 0px auto;
+    padding: 0px 40px 0px 40px;
+     max-width: 1200px; 
+  }
+
+  .fundraising
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .fundraising p
+  {
+    background-color: transparent;
+    font-size: 20px;
+    margin: 0;
+    width: 245px;
+  }
+
+  .fundraisingDesktop
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hatcheryDesktop
+  {
+    max-width: 245px;
+  }
+
+  .salmonidsDesktop
+  {
+    max-width: 245px;
+  }
+
+  .komokaDesktop
+  {
+    max-width: 245px;
+  }
+
+  .heading1
+  {
+    margin-top: 0px;
+    display: block;
+    font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+  }
+
+  .memberPhotoLeft
+  {
+    grid-column: 1/4;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  #narrowerText
+  {
+    grid-column: 4/7;
+    grid-row: 1/2;
+    margin-top: 25px;
+    margin-left: 0px;
+  }
+
+  #becomeMember
+  {
+    display: none;
+  }
+
+  .memberTextLeft
+  {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin-top: 55px;
+  }
+
+  .memberPhotoRight
+  {
+    grid-column: 4/7;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .memberTextRight
+  {
+    grid-column: 4/7;
+    grid-row: 1/2;
+    margin-top: 55px;
+  }
+
+  #message
+{
+  height: 250px;
+}
+
+.container
+{
+  z-index: 2;
+}
+
+  #contactMap
+  {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+  }
+
+
+  .shipping
+  {
+    color: white;
+    background-color: transparent;
+    margin-left: 5px;
+    margin-top: 130px;
+    margin-bottom: 35px;
+    font-size: 30px;
+    margin-left: -26px;
+  }
+
+  #moreContactInfo p
+  {
+    color: white;
+    font-size: 15px;
+  }
+
+  #moreContactInfo a
+  {
+    color: white;
+    background-color: transparent;
+    font-size: 30px;
+    margin-left: -95px;
+    margin-top: 50px;
+  }
+
+  #moreContactInfo
+  {
+    margin-left: -60px;
+  }
+
+  #mapCon
+  {
+    order: 1;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  #shippingBanner
+  {
+    z-index: 1;
+    background-color: #5d7031;
+    height: 450px;
+    width: 100%;
+    margin-top: -575px;
+    margin-bottom: 300px;
+  }
+
+  footer
+  {
+    margin-top: 300px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+
+  .container
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #mainHeader
+  {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  #burgerCon
+  {
+    display: flex;
+    height: 30px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  #burgerMenu
+  {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    justify-content: center;
+  }
+
+  #mainNav
+  {
+    order: -2;
+    background-color: #9bbc49;
+    justify-content: center;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 0;
+  }
+
+  #mainNav li
+  {
+    border-bottom: none;
+    margin-left: 20px;
+    margin-top: -30px;
+
+  }
+
+  #traaLogo
+  {
+     max-height: 200px;
+  }
+
+  .logoCon
+  {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: -50px;
+  }
+
+  #button
+  {
+    display: none;
+  }
+
+  #title
+  {
+    display: none;
+  }
+
+  .titleDesktop
+  {
+    display: block;
+    font-size: 50px;
+    margin-left: 100px;
+  }
+
+  #mainNav li:first-child
+  {
+    border-top: none;
+  }
+
+  #mainNav li a
+{
+  padding: 10px 0 10px 0; /*trbl*/
+  color: black;
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 20px;
+
+}
+
+#rodImgCon
+  {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0,1fr));
+  grid-gap: 20px;
+  }
+
+  .rodsImg
+  {
+    display: contents;
+  }
+
+  .rod
+  {
+    min-width: 150px;
+    width: 100%;
+    flex-flow: 3;
+  }
+
+  .logoHomeCon
+  {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  #logos2
+  {
+    margin-top: 90px;
+    justify-content: space-around;
+  }
+
+  #desktopContact
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+
+  #desktopContact img
+  {
+    display: block;
+    width: 382px;
+    height: 574px;
+    
+  }
+
+  #contactCon h2
+  {
+    display: none;
+  }
+  
+  .contactUsDesktop
+  {
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 90px;
+  }
+
+  #formContainer
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 110%;
+  margin-bottom: 90px;
+  margin-left: -50px;
+}
+
+  #message
+{
+  height: 130px;
+}
+
+#mapCon iframe
+{
+  width: 382px;
+  margin-right: -20px;
+}
+
+#shippingCon
+{
+  margin-left: -20px;
+}
+
+.memberBanner
+{
+  display: block;
+  background-color: #9abb48;
+  height: 50px;
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: -105px;
+  z-index: 1;
+}
+
+.member
+{
+  z-index: 2;
+}
+
+.heading1
+{
+  margin-top: 35px;
+}
+
+.lowerBanner
+{
+  height: 160px;
+  z-index: 1;
+  width: 100%;
+  background-color: #5d7031;
+  margin-bottom: -175px;
+  margin-top: 80px;
+}
+
+.memberHeading
+{
+  display: none;
+}
+
+#memberPhotoLeft
+{
+  width: 315px;
+}
+
+
+
+  .environmentalismCon
+  {
+    display: flex;
+    flex-direction: column;
+    max-width: 315px;
+  }
+
+  .headingDesktop
+  {
+    display: contents;
+    text-align: right;
+    font-size: 25px;
+  }
+
+  .differenceCon
+  {
+    display: flex;
+    flex-direction: column;
+    max-width: 315px;
+  }
+
+    .meetingsCon
+  {
+    display: flex;
+    flex-direction: column;
+    max-width: 315px;
+  }
+
+    .mainText
+  {
+    height: 500px;
+    margin-top: 0;
+  }
+
+
+  #mainCon
+  {
+    display: flex;
+  }
+
+  footer
+  {
+    display: none;
+  }
+
+
+
+
+ }
+
 
