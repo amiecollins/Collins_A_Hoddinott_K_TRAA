@@ -7,13 +7,9 @@
 	<link rel="stylesheet" href="https://use.typekit.net/cvu8obu.css">
 	<link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
-<div class="container">
-	<header>
-		<img src="images/logo.svg" alt="TRAA Logo">
-		<button class="hamburgerIcon"><img src="images/hamburger.svg"></button>
-		<nav class="mainNav">
-			<h2 class="hidden">Main Navigation</h2>
-			<ul class="hidden">
+	<nav class="stickyNav">
+		<h2 class="hidden">Desktop sticky navigation</h2>
+		<ul class="topNav">
 				<li><a href="index.html">Home</a></li> | 
 				<li><a href="about.html">About</a></li> | 
 				<li><a href="pastevents.html">Past Events</a></li> | 
@@ -23,9 +19,62 @@
 				<li><a href="contact.html">Contact Us</a></li>
 			</ul>
 		</nav>
-	</header>
+<div class="container">
 
+	<header class="mainHeader">
+		
+		<img src="images/logo.svg" alt="TRAA Logo" class="logo"><h1 class="title"><span class="mobile">TRAA</span><span class="desktop">Thames River Anglers Association</span></h1>
+		<nav class="mainNav">
+			<h2 class="hidden">Main Navigation</h2>
+			<button id="hamburgerIcon"><img src="images/icons/hamburgerIcon.svg"></button>
+			<div id="burgerCon">
+			<ul id="hamburgerNav">
+				<li><a href="index.html">Home</a></li> 
+				<li><a href="about.html">About</a></li>
+				<li><a href="pastevents.html">Past Events</a></li>
+				<li><a href="projects.html">Projects</a></li>
+				<li><a href="member.html">Become a Member</a></li>
+				<li><a href="index.html">Links</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul></div>
+			
+		</nav>
+	</header>
+	<div class="content">
+		<!-- All code goes here -->
+	</div>
+	<footer class="mainFooter">
+			<h2 class="hidden">Main Footer</h2>
+			<section class="footerButtons"><h3 class="hidden">Buttons</h3>
+				<div class="footerButton donateButton"><div class="buttonBorder">Donate</div></div>
+				<div class="footerButton memberButton"><div class="buttonBorder">Become a Member</div></div>
+			</section>
+			<section class="socialMedia"><h3 class="hidden">social media navigation</h3>
+				<div class="invitation">join us on social media</div>
+				<div class="socialMediaIcons">
+					<a href="https://www.facebook.com/groups/4TRAA/"><img src="images/icons/facebook-green.svg" alt="facebook link" class="socialMediaIcon"></a>
+
+					<a href="www.twitter.com"><img class="socialMediaIcon" src="images/icons/twitter-green.svg" alt="twitter link"></a>
+
+					<a href="https://www.youtube.com/watch?v=e1KwTJsv7AI&t=1s&fbclid=IwAR0LWrvOkoP3XRbmjbLJdgeFhxbkYgRCnawpEpBeFv_GAHFKEbVdDVA3Wl4"><img src="images/icons/youtube-green.svg" alt="youtube link" class="socialMediaIcon"></a>
+				</div>
+			</section>
+
+			<nav class="footerNav">
+			<ul class="left">
+				<li><a href="index.html">Home</a></li> 
+				<li><a href="about.html">About</a></li>
+				<li><a href="pastevents.html">Past Events</a></li>
+				<li><a href="projects.html">Projects</a></li>
+			</ul><ul class="right">
+				<li><a href="member.html">Become a Member</a></li>
+				<li><a href="index.html">Links</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</footer>
 </div>
+	<div class="bottomFloat"><span class="backToTop">back to top</span><span class="copyrightMobile">&copy; TRAA</span><span class="copyrightDesktop">&copy; Thames River Anglers Association</span></div>
 	<script src="js/main.js"></script>
 </body>
 </html>
