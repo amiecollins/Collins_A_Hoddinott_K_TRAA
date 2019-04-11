@@ -2,12 +2,6 @@
 @charset "UTF-8";
 /*CSS Doc*/
 
-@font-face {
-  font-family: Boogaloo;
-  src: url(../includes/fonts/boogaloo/Boogaloo-Regular.otf);
-  font-weight: bold;
-}
-
 .hidden {
 	display: none;
 }
@@ -65,6 +59,12 @@ a:hover {
 	display: none;
 }
 
+.mainNav {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+}
+
 #hamburgerIcon {
 	margin-top: 24px;
 	margin-right: 24px;
@@ -75,11 +75,49 @@ a:hover {
     -webkit-appearance: none;
     -moz-appearance: none;
     background-color: transparent;
+    transition: all 400ms ease;
 }
 
-#hamburgerNav {
-	display: none;
+.mainNav button.expanded
+{
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
+
+#burgerCon
+{
+  margin-top: 20px;
+  display: none;
+}
+
+#burgerCon.slideToggle {
+  display: block;
+}
+
+#hamburgerNav li a
+{
+  display: block;
+  padding: 10px 0 10px 0; /*trbl*/
+  color: #8ea76d;
+  text-align: center;
+}
+
+#hamburgerNav li
+{
+  border-bottom: 1px solid #efefef;
+}
+
+#hamburgerNav li:first-child
+{
+  border-top: 1px solid #efefef;
+}
+
+#hamburgerNav li:last-child
+{
+  margin-bottom: 10px;
+}
+
 
 .topNav {
 	display: none;
@@ -119,8 +157,9 @@ a:hover {
 	display: none;
 }
 
-@media screen and (min-width: 900px) {
-	
+
+@media screen and (min-width: 750px) {
+
 	.mobile {
 		display: none;
 	}
@@ -129,19 +168,26 @@ a:hover {
 		display: inline;
 	}
 
+	.title {
+		font-size: 56px;
+		line-height: 66px;
+	}
+
 	.mainFooter {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		background-color: #A0C156;
-		padding: 26px 17px 34px 19px;
+		padding: 17px 19px 34px 14px;
 	}
+
 
 	.footerButtons {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		width: 550px;
+		width: 430px;
+		height: 45px;
 		flex-shrink: 1;
 	}
 
@@ -153,23 +199,27 @@ a:hover {
 		background: linear-gradient(to bottom, #e0d917 1%,#668123 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0d917', endColorstr='#668123',GradientType=0 ); /* IE6-9 */
 		border: 2px solid #000;
-		width: 250px;
-		height: 64px;
+		width: 160px;
 		padding: 1px;
 		flex-shink: 2;
 	}
 
 	.buttonBorder {
 		border: 3px double #000;
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 5px;
+		padding-bottom: 5px;
 		text-transform: uppercase;
-		font-size: 30px;
-		line-height: 36px;
+		font-size: 21px;
+		line-height: 25px;
 		font-weight: bold;
 		text-align: center;
 		font-family: agency fb, sans-serif;
 	}
+
+	.memberButton {
+		min-width: 244px;
+	}
+
 
 	.socialMedia {
 		display: flex;
@@ -184,13 +234,13 @@ a:hover {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		width: 236px;
+		width: 165px;
 		flex-shink: 1;
 	}
 
 	.socialMediaIcon {
-		width: 65px;
-		height: 65px;
+		width: 45px;
+		height: 45px;
 		flex-shink: 1;
 	}
 
@@ -206,13 +256,64 @@ a:hover {
 		display: block;
 	}
 
+
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 900px) {
+	
+	.title {
+		font-size: 65px;
+		line-height: 77px;
+	}
+
+	.mainFooter {
+		padding: 26px 17px 34px 19px;
+	}
+
+	.footerButtons {
+		width: 550px;
+		flex-shrink: 1;
+	}
+
+	.footerButton {
+		width: 250px;
+		height: 64px;
+	}
+
+	.buttonBorder {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-transform: uppercase;
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	.socialMediaIcons {
+		width: 236px;
+	}
+
+	.socialMediaIcon {
+		width: 65px;
+		height: 65px;
+	}
+
+}
+
+@media screen and (min-width: 1000px) {
 
 	.footerButton {
 		width: 216px;
 		height: 71px;
+	}
+
+
+	#burgerCon
+	{
+	  display: none;
+	}
+
+	#burgerCon.slideToggle {
+	  display: none;
 	}
 
 	.buttonBorder {
@@ -224,7 +325,6 @@ a:hover {
 		font-weight: bold;
 		text-align: center;
 		font-family: agency fb, sans-serif;
-		height: 55px;
 	}
 
 	.memberButton {
@@ -245,6 +345,15 @@ a:hover {
 		font-size: 12px;
 		line-height: 15px;
 		font-family: tenso, sans-serif;
+	}
+
+	.socialMediaIcons {
+		max-width: 187px;
+	}
+
+	.socialMediaIcon {
+		width: 50px;
+		height: 50px;
 	}
 
 	.left {
@@ -388,79 +497,6 @@ p
   height: 52px;
   border: 0;
   transition: all 400ms ease;
-}
-
-#burgerMenu
-{
-  list-style: none;
-}
-
-#mainNav button.expanded
-{
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  margin-left: auto;
-}
-
-#mainNav li a
-{
-  display: block;
-  padding: 10px 0 10px 0; /*trbl*/
-  color: #8ea76d;
-  text-align: center;
-}
-
-#mainNav li
-{
-  border-bottom: 1px solid #efefef;
-}
-
-#mainNav li:first-child
-{
-  border-top: 1px solid #efefef;
-}
-
-#mainNav li:last-child
-{
-  margin-bottom: 10px;
-}
-
-
-#mainNav input[type=text]
-{
-  display: block;
-  width: 100%;
-  height: 40px;
-  padding: 5px;
-  border: 1px solid #cacaca;
-  border-radius: 3px 0px 3px 0px;
-  background-color: #fefefe;
-  box-shadow: inset 0 1px 2px rgba(10,10,10, 0.1);
-  color: #0a0a0a;
-}
-
-#mainNav input[type=submit]
-{
-  height: 40px;
-  width: 100px;
-  border-radius: 0 3px 3px 0;
-  text-align: center;
-  font-size: 14px;
-  background-color: #8fa771;
-  color: #fefefe;
-  border: 0;
-}
-
-#burgerCon
-{
-  margin-top: 20px;
-  display: none;
-}
-
-#burgerCon.slideToggle
-{
-  display: block;
 }
 
 .home
@@ -1199,99 +1235,7 @@ footer
 }
 
 @media screen and (min-width: 1000px) {
-
-  .container
-  {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #mainHeader
-  {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0;
-  }
-
-  #burgerCon
-  {
-    display: flex;
-    height: 30px;
-    margin-left: auto;
-    margin-right: 20px;
-  }
-
-  #burgerMenu
-  {
-    display: flex;
-    flex-direction: row;
-    text-align: right;
-    justify-content: center;
-  }
-
-  #mainNav
-  {
-    order: -2;
-    background-color: #9bbc49;
-    justify-content: center;
-    margin-right: -15px;
-    margin-left: -15px;
-    margin-top: 0;
-  }
-
-  #mainNav li
-  {
-    border-bottom: none;
-    margin-left: 20px;
-    margin-top: -30px;
-
-  }
-
-  #traaLogo
-  {
-     max-height: 200px;
-  }
-
-  .logoCon
-  {
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    margin-bottom: -50px;
-  }
-
-  #button
-  {
-    display: none;
-  }
-
-  #title
-  {
-    display: none;
-  }
-
-  .titleDesktop
-  {
-    display: block;
-    font-size: 50px;
-    margin-left: 100px;
-  }
-
-  #mainNav li:first-child
-  {
-    border-top: none;
-  }
-
-  #mainNav li a
-{
-  padding: 10px 0 10px 0; /*trbl*/
-  color: black;
-  text-align: center;
-  margin-bottom: 60px;
-  font-size: 20px;
-
-}
-
+	
 #rodImgCon
   {
   display: grid;

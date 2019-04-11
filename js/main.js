@@ -3,7 +3,7 @@
 	
 	console.log("fired");
 
-	var button = document.querySelector("#button");
+	var button = document.querySelector("#hamburgerIcon");
 	var burgerCon = document.querySelector("#burgerCon");
 
 	function hamburgerMenu() {
