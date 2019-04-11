@@ -32,7 +32,8 @@ a:hover {
 	margin-top: 11px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .logo {
@@ -44,15 +45,16 @@ a:hover {
 .title {
 	font-family: agency fb, sans-serif;
 	color: #9BBC49;
-	width: 620px;
-	height: 212px;
-	font-size: 75px;
-	line-height: 89px;
+	width: 100%;
+	font-size: 12vw;
 	margin-left: 23px;
-	text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+	text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
     overflow: hidden;
     white-space: nowrap;
-    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    height: 84px;
+    text-align: left;
 }
 
 .desktop {
@@ -61,13 +63,14 @@ a:hover {
 
 .mainNav {
 	display: flex;
-	justify-content: flex-end;
 	flex-direction: column;
+	align-items: flex-end;
 }
 
 #hamburgerIcon {
 	margin-top: 24px;
 	margin-right: 24px;
+	margin-left: auto;
 	width: 41px;
 	height: 37px;
 	border: none;
@@ -83,6 +86,7 @@ a:hover {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
+  margin-left: ;
 }
 
 #burgerCon
@@ -169,8 +173,7 @@ a:hover {
 	}
 
 	.title {
-		font-size: 56px;
-		line-height: 66px;
+		font-size: 6vw;
 	}
 
 	.mainFooter {
@@ -260,14 +263,13 @@ a:hover {
 }
 
 @media screen and (min-width: 900px) {
-	
-	.title {
-		font-size: 65px;
-		line-height: 77px;
-	}
 
 	.mainFooter {
 		padding: 26px 17px 34px 19px;
+	}
+
+	.title {
+		font-size: 6.5vw;
 	}
 
 	.footerButtons {
@@ -306,9 +308,11 @@ a:hover {
 		height: 71px;
 	}
 
+	.title {
+		font-size: 70px;
+	}
 
-	#burgerCon
-	{
+	#burgerCon {
 	  display: none;
 	}
 
@@ -420,13 +424,6 @@ img {
   -ms-interpolation-mode: bicubic; 
 }
 
-/*Fonts*/
-@font-face {
-font-family: tenso, sans-serif;
-font-weight: 400;
-font-style: normal;
-}
-
 /*General Rules for Elements*/
 
 body
@@ -452,52 +449,6 @@ p
   font-size: 15px;
 }
 
-/*Header and Nav*/
-
-#mainHeader
-{
-  margin-bottom: 20px;
-  margin-top: 5px;
-  display: flex;
-  justify-content: space-between;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-#traaLogo
-{
-  display: block;
-  max-height: 60px;
-  margin-top: 0;
-}
-
-#title
-{
-  font-size: 28px;
-  font-family: Boogaloo;
-  src: url(../assets/fonts/boogaloo/Boogaloo-Regular.otf);
-  font-weight: bold;
-  color: #9BBC49;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-}
-
-
-/*want to push burger menu to right, set to flex*/
-#mainNav
-{
-  display: flex;
-  flex-direction: column;
-  margin-top: 8px;
-}
-
-#mainNav button
-{
-  background: url(../img/burger.svg) center no-repeat;
-  width: 36px;
-  height: 52px;
-  border: 0;
-  transition: all 400ms ease;
-}
 
 .home
 {
