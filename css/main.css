@@ -1,3 +1,289 @@
+
+@charset "UTF-8";
+/*CSS Doc*/
+
+@font-face {
+  font-family: Boogaloo;
+  src: url(../includes/fonts/boogaloo/Boogaloo-Regular.otf);
+  font-weight: bold;
+}
+
+.hidden {
+	display: none;
+}
+
+b {
+	font-weight: bold;
+}
+
+a {
+	transition: 0.5s;
+}
+
+a:hover {
+	letter-spacing: 2px;
+}
+
+.container {  
+	margin: 0px auto;
+	padding: 0px 15px 0px 15px;
+	max-width: 1200px; 
+}
+
+.content {
+	min-height: calc(100vh - 70px);
+}
+
+.mainHeader {
+	margin-top: 11px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 94px;
+	height: 84px;
+	margin-left: 12px;
+}
+
+.title {
+	font-family: agency fb, sans-serif;
+	color: #9BBC49;
+	width: 620px;
+	height: 212px;
+	font-size: 75px;
+	line-height: 89px;
+	margin-left: 23px;
+	text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    overflow: hidden;
+    white-space: nowrap;
+    flex-grow: 2;
+}
+
+.desktop {
+	display: none;
+}
+
+#hamburgerIcon {
+	margin-top: 24px;
+	margin-right: 24px;
+	width: 41px;
+	height: 37px;
+	border: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+}
+
+#hamburgerNav {
+	display: none;
+}
+
+.topNav {
+	display: none;
+}
+
+.mainFooter {
+	display: none;
+}
+
+.bottomFloat {
+	position: absolute;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 30px;
+	font-family: tenso, sans-serif;
+	font-size: 20px;
+	line-height: 26px;
+	padding-top: 4px;
+	background-color: #A0C156;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.backToTop {
+	text-align: left;
+	margin-left: 19px;
+}
+
+.copyrightMobile {
+	text-align: right;
+	margin-right: 19px;
+}
+
+.copyrightDesktop {
+	display: none;
+}
+
+@media screen and (min-width: 900px) {
+	
+	.mobile {
+		display: none;
+	}
+
+	.desktop {
+		display: inline;
+	}
+
+	.mainFooter {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		background-color: #A0C156;
+		padding: 26px 17px 34px 19px;
+	}
+
+	.footerButtons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 550px;
+		flex-shrink: 1;
+	}
+
+	.footerButton {
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0d917+1,668123+100 */
+		background: #e0d917; /* Old browsers */
+		background: -moz-linear-gradient(top, #e0d917 1%, #668123 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, #e0d917 1%,#668123 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, #e0d917 1%,#668123 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0d917', endColorstr='#668123',GradientType=0 ); /* IE6-9 */
+		border: 2px solid #000;
+		width: 250px;
+		height: 64px;
+		padding: 1px;
+		flex-shink: 2;
+	}
+
+	.buttonBorder {
+		border: 3px double #000;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-transform: uppercase;
+		font-size: 30px;
+		line-height: 36px;
+		font-weight: bold;
+		text-align: center;
+		font-family: agency fb, sans-serif;
+	}
+
+	.socialMedia {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.invitation {
+		display: none;
+	}
+
+	.socialMediaIcons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 236px;
+		flex-shink: 1;
+	}
+
+	.socialMediaIcon {
+		width: 65px;
+		height: 65px;
+		flex-shink: 1;
+	}
+
+	.footerNav {
+		display: none;
+	}
+
+	.copyrightMobile {
+		display: none;
+	}
+
+	.copyrightDesktop {
+		display: block;
+	}
+
+}
+
+@media screen and (min-width: 1200px) {
+
+	.footerButton {
+		width: 216px;
+		height: 71px;
+	}
+
+	.buttonBorder {
+		border: 3px double #000;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		font-size: 41px;
+		line-height: 49px;
+		font-weight: bold;
+		text-align: center;
+		font-family: agency fb, sans-serif;
+		height: 55px;
+	}
+
+	.memberButton {
+		min-width: 315px;
+	}
+
+	.invitation {
+		display: block;
+		font-family: tenso, sans-serif;
+		font-size: 18px;
+		line-height: 23px;
+		text-align: center;
+	}
+
+	.footerNav {
+		display: flex;
+		flex-direction: row;
+		font-size: 12px;
+		line-height: 15px;
+		font-family: tenso, sans-serif;
+	}
+
+	.left {
+		text-align: right;
+		margin-right: 9px;
+	}
+
+	#hamburgerIcon {
+		display: none;
+	}
+
+	.topNav {
+		display: inline;
+		position: fixed;
+		top: 0px;
+		width: 100%;
+		height: 50px;
+		font-family: agency fb, sans-serif;
+		font-size: 35px;
+		line-height: 41px;
+		background-color: #A0C156;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		text-transform: uppercase;
+		padding-top: 4px;
+	}
+
+	.topNav li {
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+
+	.container {
+		margin-top: 50px;
+	}
+
+}
+
   /*Utility Class*/
 .hide
 {
@@ -55,12 +341,6 @@ p
   font-family: 'tenso', Helvetica, Arial, sans-serif;
   color: black;
   font-size: 15px;
-}
-
-.container {
-  margin: 0px auto;
-  padding: 0px 0px 0px 0px;
-  max-width: 1200px; 
 }
 
 /*Header and Nav*/
@@ -1193,5 +1473,4 @@ footer
 
 
  }
-
 
