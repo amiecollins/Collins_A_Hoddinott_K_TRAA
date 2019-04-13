@@ -20,12 +20,8 @@ a:hover {
 
 .container {  
 	margin: 0px auto;
-	padding: 0px 15px 0px 15px;
+	padding: 30px 15px 0px 15px;
 	max-width: 1200px; 
-}
-
-.content {
-	min-height: calc(100vh - 70px);
 }
 
 .mainHeader {
@@ -131,9 +127,10 @@ a:hover {
 	display: none;
 }
 
-.bottomFloat {
+#bottomFloat {
 	position: absolute;
 	position: fixed;
+	z-index: 3;
 	bottom: 0px;
 	width: 100%;
 	height: 30px;
@@ -160,7 +157,6 @@ a:hover {
 .copyrightDesktop {
 	display: none;
 }
-
 
 @media screen and (min-width: 750px) {
 
@@ -384,6 +380,7 @@ a:hover {
 		justify-content: flex-end;
 		text-transform: uppercase;
 		padding-top: 4px;
+		z-index: 3;
 	}
 
 	.topNav li {
@@ -467,6 +464,7 @@ p
 {
   text-align: center;
   min-width: 70%;
+  margin: 20px;
 }
 
 
@@ -686,9 +684,6 @@ p
   text-align: justify;
 }
 
-
-
-
 #contactCon
 {
   max-width: 1200px;
@@ -871,18 +866,15 @@ footer
   font-size: 16px;
 }
 
-
+footer {
+	margin-top: 100px;
+}
 
 
 }
 
 @media screen and (min-width: 650px) {
-.home
-{
-  
-}
 
-.welcomeCon
 
 #welcomePhoto
 {
@@ -992,7 +984,6 @@ footer
   #gearTees
   {
     font-size: 22px;
-    margin-top: -15px;
     margin-bottom: 0;
   }
   
@@ -1179,10 +1170,6 @@ footer
     margin-bottom: 300px;
   }
 
-  footer
-  {
-    margin-top: 300px;
-  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -1358,14 +1345,6 @@ footer
   {
     display: flex;
   }
-
-  footer
-  {
-    display: none;
-  }
-
-
-
 
  }
 
