@@ -11,6 +11,8 @@
 		button.classList.toggle("expanded");
 	}
 
+
 	button.addEventListener("click", hamburgerMenu, false);
+
 		
 })();
