@@ -39,7 +39,7 @@ a:hover {
 }
 
 .title {
-	font-family: agency fb, sans-serif;
+	font-family: agency-fb, sans-serif;
 	color: #9BBC49;
 	width: 100%;
 	font-size: 12vw;
@@ -158,6 +158,26 @@ a:hover {
 	display: none;
 }
 
+/*About Page*/
+
+.mainVideo {
+	width: 340px;
+	height: 230px;
+}
+
+.aboutTitle {
+	width: 100%;
+	height: 60px;
+	background-image: url(../images/about_title.jpg);
+	font-family: agency-fb, Helvetica, Arial, sans-serif;
+	font-size: 25px;
+	line-height: 30px;
+	color: #FFF;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.
+
 @media screen and (min-width: 750px) {
 
 	.mobile {
@@ -212,7 +232,7 @@ a:hover {
 		line-height: 25px;
 		font-weight: bold;
 		text-align: center;
-		font-family: agency fb, sans-serif;
+		font-family: agency-fb, sans-serif;
 	}
 
 	.memberButton {
@@ -324,7 +344,7 @@ a:hover {
 		line-height: 49px;
 		font-weight: bold;
 		text-align: center;
-		font-family: agency fb, sans-serif;
+		font-family: agency-fb, sans-serif;
 	}
 
 	.memberButton {
@@ -371,7 +391,7 @@ a:hover {
 		top: 0px;
 		width: 100%;
 		height: 50px;
-		font-family: agency fb, sans-serif;
+		font-family: agency-fb, sans-serif;
 		font-size: 35px;
 		line-height: 41px;
 		background-color: #A0C156;
