@@ -472,6 +472,7 @@ a:hover {
 .pastEventsContent {
 	display: none;
 	flex-direction: column;
+	margin-bottom: 30px;
 }
 
 .visible {
@@ -498,11 +499,50 @@ a:hover {
 	background-image: url(../images/riverShot.jpg);
 }
 
+.Img3 {
+	background-image: url(../images/photo2.jpg);
+}
+
+.Img4 {
+	background-image: url(../images/photo6.jpg);
+}
+
+.Img5 {
+	background-image: url(../images/photo5.jpg);
+}
+
+.Img6 {
+	background-image: url(../images/photo7.jpg);
+}
+
+.Img7 {
+	background-image: url(../images/photo8.jpg);
+}
+
+.Img8 {
+	background-image: url(../images/photo1.jpg);
+}
+
+.Img9 {
+	background-image: url(../images/photo3.jpg);
+}
+
+.Img10 {
+	background-image: url(../images/photo4.jpg);
+}
+
+.Img11 {
+	background-image: url(../images/photo10.jpg);
+}
+
+.Img12 {
+	background-image: url(../images/photo9.jpg);
+}
+
 .articleTitle {
 	font-size: 27px;
 	line-height: 30px;
 	background-color: #A0C156;
-	height: 75px;
 	transition: 1s;
 	padding: 10px;
 }
@@ -514,6 +554,12 @@ a:hover {
 
 .articleContents {
 	display: none;
+}
+
+#close-button {
+	font-size: 45px;
+	line-height: 56px;
+	font-weight: bold;
 }
 
 
@@ -699,6 +745,10 @@ a:hover {
 
 	.articleImg {
 		height: 340px;
+	}
+
+	#focusedImage {
+		height: 450px;
 	}
 
 }

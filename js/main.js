@@ -35,11 +35,13 @@
 		var eventNum = this.id.replace("Event", "");
 		lightBoxImg.classList.add(`Img${eventNum}`);
 		lightBoxArticle.innerHTML = document.getElementById(`Img${eventNum}`).innerHTML;
+		scrollToTop();
 	}
 
 	function LightBoxOff() {
 		console.log(this.textContent);
 		thelightBox.classList.remove("light-box-visible");
+
 	}
 
 
