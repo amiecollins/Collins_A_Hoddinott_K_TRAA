@@ -1,6 +1,6 @@
 # Final Integrated Project for Kat Hoddinott and Amie Collins
 ## Thames River Anglers' Association Website Version 1.0
-edited 02/11/19
+edited 04/14/19
 
 ### Purpose of Website
 to bring awareness of the TRAA's projects to the public and attract them to join or otherwise support the organization.
@@ -20,19 +20,20 @@ to provide a source of information about the TRAA's activites in the area
 #### Color
 * #5d7031 - dark green, background of website, banners, link color
 * #9abd4b - light green, background to text, highlight color
-* #707070 - grey - accent color
+* #E4E4E4 - grey - accent color
 * #000000 - black - text color
 #### Fonts
-* Agency FB - main site, headers and main text
-* Boogaloo - footer accent color, fundraising
+* Agency FB - header and titles
+* Tenso - main text
 
 ### Description of Website
-* Top nav floats at top edge of screen so it's always accessable. It has an animated fish pop out for every link once you hover over it.
+* Top nav floats at top edge of screen so it's always accessable. Is a hamburger menu in tablet and mobile forms.
 * Header is a simple logo and title, static.
-* Footer has some fundraising information as well as highlights the TRAAs 3 most vital projects, the Hatchery, Lake Komoka and the Salomoid monitoring program.
+* Footer has social media links (desktop and tablet), a nav (desktop), donate and become a member buttons (tablet and desktop).
+* Sticky footer has a back to top button and the copyright
 * The index page has lots of information such as their upcoming rod-building event, local community contributor logos and and ad for TRAA gear.
-* The about page outlines the TRAA's values and history.
-* The past events page contains articles about the past events the TRAA has held
+* The about page outlines the TRAA's values and history, and contains a video.
+* The past events page contains articles about the past events the TRAA has held, and has a gallery like format.
 * The become a member page has all the information about becoming a member, as well as when/where their meetings are.
 * The links page has helpful links as well as downloads for their past newsletters.
 * The contact us page has a form that will let the user email the TRAA about anything they desire.
