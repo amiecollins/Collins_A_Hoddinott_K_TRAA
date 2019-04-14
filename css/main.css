@@ -82,12 +82,13 @@ a:hover {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  margin-left: ;
 }
 
 #burgerCon
 {
   margin-top: 20px;
+  z-index: 3;
+  background-color: #FFF;
   display: none;
 }
 
@@ -406,6 +407,115 @@ a:hover {
 	margin-left: 85px;
 }
 
+/*Past Events Page*/
+
+.lightBox {
+	display: none;
+	position: absolute;
+	height: 3000px;
+	width: 100%;
+	z-index: 2;
+	top: 150px;
+	text-align: center;
+	background-color: #E4E4E4;
+	flex-direction: column;
+}
+
+.light-box-visible {
+	display: flex;
+}
+
+#focusedImage {
+	width: 95%;
+	height: 390px;
+	background-size: cover;
+	background-position: center;
+	margin: 20px auto 0px auto;
+}
+
+#focusedArticle .articleTitle {
+	background-color: transparent;
+	text-align: left;
+	font-weight: bold;
+}
+
+#focusedArticle .articleContents {
+	display: block;
+	text-align: left;
+	margin: 10px;
+}
+
+.pastEventsTitle {
+	font-family: agency-fb, Helvetica, Arial, sans-serif;
+	font-size: 45px;
+	line-height: 54px;
+	color: white;
+	font-weight: bold;
+	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    display: inline-block;
+    text-align: left;
+    vertical-align: bottom;
+    width: 100%;
+    height: 60px;
+    padding: 4px 2px 0px 12px;
+    background-image: url(../images/past_events_title.jpg);
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: agency fb, sans-serif;
+	margin-bottom: 30px;
+}
+
+.pastEventsContent {
+	display: none;
+	flex-direction: column;
+}
+
+.visible {
+	display: flex;
+}
+
+.articleImg {
+	width: 95%;
+	height: 396px;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	margin: 20px auto 20px auto;
+}
+
+.Img1 {
+	background-image: url(../images/holdingFish.jpg);
+}
+
+.Img2 {
+	background-image: url(../images/riverShot.jpg);
+}
+
+.articleTitle {
+	font-size: 27px;
+	line-height: 30px;
+	background-color: #A0C156;
+	height: 75px;
+	transition: 1s;
+	padding: 10px;
+}
+
+.articleSubtitle {
+	font-size: 18px;
+	line-height: 23px;
+}
+
+.articleContents {
+	display: none;
+}
+
 
 @media screen and (min-width: 750px) {
 
@@ -573,6 +683,23 @@ a:hover {
 		line-height: 17px;
 	}
 
+	/*Past Events Page*/
+
+	.pastEventsContent {
+		flex-direction: row;
+		align-items: stretch;
+		align-content: stretch;
+		flex-wrap: wrap;
+	}
+
+	.pastEvent {
+		flex: 3 3 570px;
+		margin: 0 auto;
+	}
+
+	.articleImg {
+		height: 340px;
+	}
 
 }
 
