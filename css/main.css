@@ -39,7 +39,7 @@ a:hover {
 }
 
 .title {
-	font-family: agency fb, sans-serif;
+	font-family: agency-fb, sans-serif;
 	color: #9BBC49;
 	width: 100%;
 	font-size: 12vw;
@@ -82,12 +82,13 @@ a:hover {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  margin-left: ;
 }
 
 #burgerCon
 {
   margin-top: 20px;
+  z-index: 3;
+  background-color: #FFF;
   display: none;
 }
 
@@ -158,6 +159,364 @@ a:hover {
 	display: none;
 }
 
+/*About Page*/
+
+.mainVideo {
+	display: block;
+	width: 95%;
+	height: 230px;
+	margin: 0 auto;
+}
+
+.aboutTitle {
+	width: 95%;
+	height: 56px;
+	background-image: url(../images/about_title.jpg);
+    background-position: center;
+	background-size: cover;
+	font-family: agency-fb, Helvetica, Arial, sans-serif;
+	font-size: 25px;
+	line-height: 25px;
+	color: #FFF;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding-left: 10px;
+    padding-top: 4px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.aboutSubtitle {
+	font-family: tenso, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	color: #000;
+	text-shadow: 0px 0px 0 #000;
+	line-height: 15px;
+}
+
+.values {
+	display: flex;
+	flex-direction: column;
+	height: 830px;
+	justify-content: space-around;
+}
+
+.value {
+	width: 95%;
+	height: 120px;
+    background-position: center;
+	background-size: cover;
+    background-repeat:no-repeat;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.value1 {
+	background-image: url(../images/bwFish.jpg);
+    background-position: center top;
+}
+
+.value2 {
+	background-image: url(../images/moss.jpg);
+}
+
+.value3 {
+	background-image: url(../images/riverWork.jpg);
+}
+
+.value4 {
+	background-image: url(../images/colorfulFish.jpg);
+}
+
+.value5 {
+	background-image: url(../images/riverBridge.jpg);
+    background-position: center top;
+}
+
+.value6 {
+	background-image: url(../images/workingTogether.jpg);
+    background-position: center top;
+}
+
+.valueContents {
+	opacity: 0.75;
+	background-color: #A0C156;
+	padding: 8px 10px 0px 10px;
+	height: 60px;
+}
+
+.historyTitle {
+	width: 95%;
+	height: 56px;
+	background-image: url(../images/history_title.jpg);
+    background-position: center;
+	background-size: cover;
+	font-family: agency-fb, Helvetica, Arial, sans-serif;
+	font-size: 25px;
+	line-height: 30px;
+	color: #FFF;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.history {
+	width: 95%;
+	font-size: 15px;
+	line-height: 19px;
+	min-height: 500px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+/*Projects Page*/
+
+.chartIntro {
+	font-size: 50px;
+	line-height: 60px;
+	text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+	color: #5D7031;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.charts {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+.chart {
+	display: flex;
+	flex-direction: column;
+}
+
+.chart img {
+	width: 95%;
+	height: 200px;
+	flex: 1 1 350px;
+}
+
+.chartInfo {
+	margin: 20px;
+	font-size: 17px;
+	line-height: 22px;
+	width: 95%;
+}
+
+.projectsTitle {
+	width: 95%;
+	height: 50px;
+	font-size: 31px;
+	line-height: 37px;
+	font-family: agency-fb, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	background-image: url(../images/project_title_bg.jpg);
+	background-position: center;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	color: #FFF;
+	padding-top: 10px;
+	padding-left: 20px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+
+.projects {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 95%;
+	margin: 0 auto;
+}
+
+.project {
+	border: 1px solid #707070;
+	padding: 16px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.projectImg {
+	width: 100%;
+	height: 180px;
+	margin-bottom: 15px;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.salmonidPic {
+	background-image: url(../images/salmonid_projects.jpg);
+}
+
+.eggsPic {
+	background-image: url(../images/eggs.jpg);
+}
+
+.projectTitle {
+	background-color: #A0C156;
+	opacity: 0.75;
+	width: 100%;
+	height: 88px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	color: #FFF;
+	font-size: 25px;
+	line-height: 30px;
+	font-family: agency-fb, Helvetica, Arial, sans-serif;
+	font-weight: black;
+	padding: 11px;
+}
+
+.projectSubtitle {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+
+.projectDesc {
+	font-size: 17px;
+	line-height: 22px;
+}
+
+.bullet {
+	background-image: url(../images/icons/bullet.svg);
+	height: 8px;
+	width: 8px;
+	margin: 2px;
+}
+
+.projectArchives {
+	font-size: 20px;
+	line-height: 26px;
+	margin-bottom: 100px;
+	margin-left: 15px;
+}
+
+.archivedProject {
+	display: flex;
+	flex-direction: row;
+	margin-left: 85px;
+}
+
+/*Past Events Page*/
+
+.lightBox {
+	display: none;
+	position: absolute;
+	height: 3000px;
+	width: 100%;
+	z-index: 2;
+	top: 150px;
+	text-align: center;
+	background-color: #E4E4E4;
+	flex-direction: column;
+}
+
+.light-box-visible {
+	display: flex;
+}
+
+#focusedImage {
+	width: 95%;
+	height: 390px;
+	background-size: cover;
+	background-position: center;
+	margin: 20px auto 0px auto;
+}
+
+#focusedArticle .articleTitle {
+	background-color: transparent;
+	text-align: left;
+	font-weight: bold;
+}
+
+#focusedArticle .articleContents {
+	display: block;
+	text-align: left;
+	margin: 10px;
+}
+
+.pastEventsTitle {
+	font-family: agency-fb, Helvetica, Arial, sans-serif;
+	font-size: 45px;
+	line-height: 54px;
+	color: white;
+	font-weight: bold;
+	text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    display: inline-block;
+    text-align: left;
+    vertical-align: bottom;
+    width: 100%;
+    height: 60px;
+    padding: 4px 2px 0px 12px;
+    background-image: url(../images/past_events_title.jpg);
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: agency fb, sans-serif;
+	margin-bottom: 30px;
+}
+
+.pastEventsContent {
+	display: none;
+	flex-direction: column;
+}
+
+.visible {
+	display: flex;
+}
+
+.articleImg {
+	width: 95%;
+	height: 396px;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	margin: 20px auto 20px auto;
+}
+
+.Img1 {
+	background-image: url(../images/holdingFish.jpg);
+}
+
+.Img2 {
+	background-image: url(../images/riverShot.jpg);
+}
+
+.articleTitle {
+	font-size: 27px;
+	line-height: 30px;
+	background-color: #A0C156;
+	height: 75px;
+	transition: 1s;
+	padding: 10px;
+}
+
+.articleSubtitle {
+	font-size: 18px;
+	line-height: 23px;
+}
+
+.articleContents {
+	display: none;
+}
+
+
 @media screen and (min-width: 750px) {
 
 	.mobile {
@@ -212,7 +571,7 @@ a:hover {
 		line-height: 25px;
 		font-weight: bold;
 		text-align: center;
-		font-family: agency fb, sans-serif;
+		font-family: agency-fb, sans-serif;
 	}
 
 	.memberButton {
@@ -255,6 +614,92 @@ a:hover {
 		display: block;
 	}
 
+	/*About Page*/
+
+	.mainVideo {
+		width: 720px;
+		height: 480px;
+	}
+
+	.aboutTitle {
+		margin-bottom: 8px;
+	}
+
+	.values {
+		flex-direction: row;
+		flex-wrap: wrap;
+		height: 540px;
+		margin: 0 auto;
+		justify-content: space-between;
+	}
+
+	.value {
+		width: 45%;
+		height: 170px;
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+	.valueContents {
+		margin: 0 13px 13px 13px;
+	}
+
+	/*Projects Page*/
+	
+	.chart {
+		flex-direction: row;
+	}
+
+	.chart2 {
+		flex-direction: row-reverse;
+	}
+
+	.chart img {
+		width: 40%;
+		height: 250px;
+	}
+
+	.projects {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.project {
+		margin: 20px;
+	}
+
+	.projectImg {
+		height: 245px;
+		flex: 1 1 450px;
+	}
+
+	.projectTitle {
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	.projectSubtitle {
+		font-size: 15px;
+		line-height: 17px;
+	}
+
+	/*Past Events Page*/
+
+	.pastEventsContent {
+		flex-direction: row;
+		align-items: stretch;
+		align-content: stretch;
+		flex-wrap: wrap;
+	}
+
+	.pastEvent {
+		flex: 3 3 570px;
+		margin: 0 auto;
+	}
+
+	.articleImg {
+		height: 340px;
+	}
 
 }
 
@@ -324,7 +769,7 @@ a:hover {
 		line-height: 49px;
 		font-weight: bold;
 		text-align: center;
-		font-family: agency fb, sans-serif;
+		font-family: agency-fb, sans-serif;
 	}
 
 	.memberButton {
@@ -371,7 +816,7 @@ a:hover {
 		top: 0px;
 		width: 100%;
 		height: 50px;
-		font-family: agency fb, sans-serif;
+		font-family: agency-fb, sans-serif;
 		font-size: 35px;
 		line-height: 41px;
 		background-color: #A0C156;
@@ -390,6 +835,52 @@ a:hover {
 
 	.container {
 		margin-top: 50px;
+	}
+
+	/*About Page*/
+
+	.aboutTitle {
+		text-align: center;
+	}
+
+	.historyTitle {
+		text-align: center;
+	}
+	
+	.history {
+		min-height: 300px;
+	}
+
+	.values {
+		width: 97%;
+		height: 420px;
+	}
+
+	.value {
+		height: 195px;
+		width: 30%;
+	}
+
+	/*Projects Page*/
+
+	.chart img {
+		height: 338px;
+		width: 60%;
+	}
+
+	.projectImg {
+		height: 295px;
+		flex: 1 1 520px;
+	}
+
+	.projectTitle {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.projectSubtitle {
+		font-size: 20px;
+		line-height: 24px;
 	}
 
 }
@@ -837,10 +1328,6 @@ p
   display: none;
 }
 
-footer
-{
-  font-size: 20px;
-}
 
 @media screen and (min-width: 500px) {
 
